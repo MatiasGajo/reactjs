@@ -1,34 +1,29 @@
 import CardWidget from "./CardWidget"
-import logo from "./images/logo.png"
+import { Link, NavLink } from "react-router-dom"
+
 
 const NavBar = () => {
     return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col">
-                    <nav className="navbar navbar-expand-lg">
-                        <div className="container-fluid">
-                            <a className="navbar-brand" href={"/"}><img className="logo" src={logo} alt="logo"/></a>
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href={"/"}>Home</a>
-                                </li>
-                                <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href={"/"}>Productos</a>
-                                </li>
-                            </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div className="col d-flex align-items-center justify-content-end">
+        <div className="navbar-menu">
+            <header>
+                <Link className="logo-link" to={"/"}>
+                <h1 className="logo">Rayo Store</h1></Link>
+            </header>
+            <nav>
+                <ul className="navbar-links">
+                    <li ><NavLink className="navbar-link" to={"/"}>Todos los productos</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/cuchillo"}>Cuchillos</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/guantes"}>Guantes</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/m4"}>M4A4/A1</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/ak-47"}>AK-47</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/awp"}>AWP</NavLink></li>
+                    <li><NavLink className="navbar-link" to={"/category/pistolas"}>Pistolas</NavLink></li>
                     <CardWidget />
-                </div>
-            </div>
+                </ul>
+            </nav>
+            <footer>
+                <p className="texto-footer">© Matias Gajo</p>
+            </footer>
         </div>
     )
 }
