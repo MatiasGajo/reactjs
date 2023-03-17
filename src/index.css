@@ -86,12 +86,42 @@ a {
   gap: 1rem;
 }
 
+.producto-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.holaa {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.holaa1 {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+
 
 
 .producto-imagen {
   max-width: 100%;
   border-radius: 1rem;
   background-color: #ececec;
+}
+
+.colorboton {
+  color: #ececec;
+  background-color: #ac2f2f;
+}
+
+.colorboton:hover {
+  background-color: #ac2f2f;
 }
 
 .producto-detalles {
